@@ -1,0 +1,87 @@
+_G.wl_key = "549019c131fefeb24803e6b1cd902e20b3760c3f"
+
+getgenv().main = {
+    osirisEnabled = true,
+    FovMode = 2, -- 2 STICKS FOV TO BODYPART; 1 STICKS FOV TO CURSOR;
+    Prediction = 0.10421, --self explanatory
+    Key = "C", --target lock key
+    UnlockKey = "Z",
+    AutoPrediction = false, -- will overwrite Prediction value and use a DECENT prediction for your ping
+    ExecuteLayAnimOnKeybind = false,
+    LayKeybind = "X",
+    NoBulletDelay = true,
+    targetWallCheck = false, -- set to true if u wanna target ppl who are inside buildings
+    fpsBoost = false,
+    SafeSilent = true,
+    AntiFloorShots = true,
+    HideVisualsKeybind = "K",
+    HideVisualsOnStart = true,
+    PredictionVisualizer = false -- FOCUS ON TRACING THE RED DOT THIS IS THE PLACE WHERE THE SHOT LOOKS THE MOST LEGIT ON CLIP
+
+}
+
+getgenv().Hitchances ={
+    revHitchance = 100,
+    shotgunHitchance = 100,
+    othersHitchance = 100,
+    
+    MidAir_revHitchance = 100,
+    MidAir_shotgunHitchance = 100,
+    MidAir_othersHitchance = 100,
+}
+
+getgenv().FovSettings = {
+    fovCircleTransparency = 0.3,
+    fovCircleThickness = 1,
+    showFov = true,
+    RevFOV = 3.84, --FOV for rev
+    RevLongDistanceFOV = 4.5,
+    ShotgunFOV = 7, --FOV for shotguns (the shotguns that work the best are Double-Barrel and Tactical)
+    OthersFOV = 2, --FOV for every other gun that's not rev or a shotgun
+}
+
+getgenv().Spoofers = {
+    MemorySpoofer = false, --Spoof memory THIS IS OP AS FUCK
+    MaxMemory = 633,
+    MinMemory = 620,
+    PingSpoofer = false,
+    MinPing = 60,
+    MaxPing = 80,
+}
+
+getgenv().SmoothCamlock = { --This is fully streamable, there's no GUI; THIS SCRIPT IS NOT OWNED OR MAINTAINED BY ME
+    LoadCamLock = false,
+    ThirdPerson = true,
+    FirstPerson = true,
+    TeamCheck = false, -- Check if Target is on your Team (True means it wont lock onto your teamates, false is vice versa) (Set it to false if there are no teams)
+    PredictMovement = true, -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
+    Prediction = 0.119,
+    CheckIfJumped = true,
+    Smoothness = true,
+    SmoothnessAmount = 0.022,
+
+    camlockFOV = 45 -- SET TO FALSE IF YOU WANT IT TO BE THE SAME AS GUN FOVS
+}
+
+getgenv().Misc = {
+    NormalAA = false,
+    SuperLegitAA = false,
+    AAKeybind = "V", --keybind for aimlock
+    RaidAwareness = false, --adds an esp box to the closest player to mouse when keybind is pressed OP FOR RAIDING
+    RaidAwarenessKeybind = "T",
+}
+
+getgenv().PredefinedPredictions = { --THIS WILL ONLY WORK IF YOU HAVE AUTOPREDICTION ON
+    Ping30_40 = 0.11,
+    Ping40_50 = 0.119,
+    Ping50_60 = 0.123,
+    Ping60_70 = 0.125,
+    Ping70_80 = 0.129,
+    Ping80_90 = 0.129591,
+    Ping90_100 = 0.130,
+    Ping100_110 = 0.131,
+    Ping110_120 = 0.134,
+    Ping120_130 = 0.141,
+    Ping130_140 = 0.150,
+}
+loadstring(game:HttpGet('https://raw.githubusercontent.com/obaduca/osiris/main/osiris.lua'))()
